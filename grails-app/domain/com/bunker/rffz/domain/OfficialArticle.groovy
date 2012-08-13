@@ -28,6 +28,5 @@ class OfficialArticle {
 	@Override
 	public String toString() {
 		return "OfficialArticle [title=" + title + ", description=" + description + ", content=" + content + ", thumbnail=" + thumbnail + ", image=" + image + ", published=" + published + "]";
-	}
-	
+	}	
 }
