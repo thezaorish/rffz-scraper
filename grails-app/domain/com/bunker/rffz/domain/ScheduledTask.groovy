@@ -15,4 +15,5 @@ class ScheduledTask {
 	static mapping = {
 		version false
 	}
+	
 }

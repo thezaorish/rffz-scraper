@@ -33,4 +33,5 @@ class Ranking {
 	public String toString() {
 		return "Ranking [type=" + type + ", rank=" + rank + ", team=" + team + ", points=" + points + ", gamesPlayed=" + gamesPlayed + ", gamesWon=" + gamesWon + ", gamesTied=" + gamesTied + ", gamesLost=" + gamesLost + ", goalsScored=" + goalsScored + ", goalsReceived=" + goalsReceived + "]";
 	}
+	
 }
