@@ -19,7 +19,7 @@ environments {
 			url = "jdbc:mysql://localhost:3306/rffz?useUnicode=true&characterEncoding=UTF8"
 			driverClassName = "com.mysql.jdbc.Driver"
 			username = "rffz"
-			password = "rffzpass"
+			password = "rffzmy5ql"
 		}
 	}
 	test {

@@ -20,17 +20,20 @@ class OfficialArticlesRetrievalService {
 			go "http://www.steauafc.com/ro/stiri/"
 			// go "http://www.steauafc.com/ro/stiri/-/2012-07-05/2012-08-04/-/2/"
 					 
-			def articleLinksWithThumnails = [:]
+			def articleLinksWithThumnails = [:] 
+			def articleLinks = [] // will ensure the order of the articles
+			
 			$(class: "stire_gradient").each {
 				def full = it.getAttribute('onclick')
 				def thumbnail = it.find('img').@src
 				
 				String url = full.substring(full.indexOf("'") + 1, full.lastIndexOf("'"))
 				articleLinksWithThumnails[url] = thumbnail
+				articleLinks.add(url)
 			}
 			log.info 'retrieveOfficialArticles: articleLinksWithThumnails ' + articleLinksWithThumnails
 			
-			for (articleLink in articleLinksWithThumnails.keySet()) {
+			for (articleLink in articleLinks.reverse()) {
 				log.info 'retrieveOfficialArticles: processing ' + articleLink
 				
 				go articleLink
@@ -56,7 +59,7 @@ class OfficialArticlesRetrievalService {
 			}
 		}
 		
-		officialArticlesService.saveArticles(articles.reverse()) // save them in reverse order
+		officialArticlesService.saveArticles(articles)
 		log.info 'retrieveOfficialArticles: ended'
 	}
 }

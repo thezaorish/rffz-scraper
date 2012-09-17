@@ -15,12 +15,12 @@ class RankingsRetrievalJob {
 
 	def execute() {
 		if (scheduledTaskService.isActive(ScheduledTaskName.RankingRetrievalJob)) {
-			log.info 'RankingRetrievalJob started'
+			log.info 'execute: started'
 			rankingsRetrievalService.retrieveNationalLeagueRanking()
 			scheduledTaskService.updateLastRun(ScheduledTaskName.RankingRetrievalJob)
-			log.info 'RankingRetrievalJob ended'
+			log.info 'execute: ended'
 		} else {
-			log.info 'RankingRetrievalJob not active'
+			log.info 'execute: not active'
 		}
 	}
 }

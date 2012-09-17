@@ -13,7 +13,7 @@ class OfficialArticle {
 
 	String published
 
-	Date createDate = new Date()
+	Date createdDate = new Date()
 
 	static constraints = {
 		title(unique: true)
