@@ -78,7 +78,7 @@ log4j = {
 		appender new DailyRollingFileAppender(
 			name: 'dailyAppender',
 			datePattern: "'.'yyyy-MM-dd",  // See the API for all patterns.
-			fileName: "/opt/rffz-scraper/scheduled-tasks.log",
+			fileName: "/opt/rffz/logs/scraper.log",
 			layout: pattern(conversionPattern:'%d{yyyy-MM-dd, HH:mm:ss} %-5p %c - %m%n')
 		)
 	}
