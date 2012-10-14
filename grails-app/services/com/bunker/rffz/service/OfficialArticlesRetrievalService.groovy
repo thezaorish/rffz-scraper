@@ -18,12 +18,12 @@ class OfficialArticlesRetrievalService {
 		Browser.drive{
 			// driver.webClient.javaScriptEnabled = true
 			go "http://www.steauafc.com/ro/stiri/"
-			// go "http://www.steauafc.com/ro/stiri/-/2012-07-05/2012-08-04/-/2/"
+			//go "http://www.steauafc.com/ro/stiri/-/2012-09-13/2012-10-13/-/2/"
 					 
 			def articleLinksWithThumnails = [:] 
 			def articleLinks = [] // will ensure the order of the articles
 			
-			$(class: "stire_gradient").each {
+			$(class: 'stire_gradient').each {
 				def full = it.getAttribute('onclick')
 				def thumbnail = it.find('img').@src
 				
@@ -37,7 +37,7 @@ class OfficialArticlesRetrievalService {
 				log.info 'retrieveOfficialArticles: processing ' + articleLink
 				
 				go articleLink
-				Thread.sleep(4000)
+				Thread.sleep(3000)
 				
 				def articleTitle = $(class: "top_articol").text()
 				def articleDescription = $(class: "desc_articol").text()
