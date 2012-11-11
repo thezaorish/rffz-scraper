@@ -50,7 +50,12 @@ class RankingsRetrievalService {
 		def pointsPerTeam = points.partition(8)
 		def rankings = []
 		
-		log.error 'deleting ..'
+		if (teams.empty || pointsPerTeam.empty || teams.size() != pointsPerTeam.size()) {
+			log.error 'stopping ranking refreshing ..'
+			return
+		}
+		
+		log.info 'deleting ..'
 		Ranking.where{
 			type == RankingType.NationalLeague
 		}.deleteAll()
@@ -72,6 +77,6 @@ class RankingsRetrievalService {
 			ranking.save()
 		}
 		
-		log.error 'pointsPerTeam: ' + rankings
+		log.info 'pointsPerTeam: ' + rankings
     }
 }
