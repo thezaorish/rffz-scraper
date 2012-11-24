@@ -11,6 +11,8 @@ class OfficialArticle {
 	String thumbnail
 	String image
 
+	String url
+	
 	String published
 
 	Date createdDate = new Date()

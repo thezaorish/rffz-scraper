@@ -52,7 +52,8 @@ class OfficialArticlesRetrievalService {
 					content: articleContent,
 					published: articleData,
 					image: articleImage,
-					thumbnail: articleThumbnail
+					thumbnail: articleThumbnail, 
+					url: articleLink
 					)
 				
 				articles << article
