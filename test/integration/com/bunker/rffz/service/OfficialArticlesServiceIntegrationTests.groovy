@@ -20,6 +20,7 @@ class OfficialArticlesServiceIntegrationTests {
 		existingArticle.thumbnail = 'thumbnail'
 		existingArticle.image = 'image'
 		existingArticle.published = 'published'
+		existingArticle.url = 'www.url.com'
 		existingArticle.save()
     }
 
@@ -41,6 +42,7 @@ class OfficialArticlesServiceIntegrationTests {
 		newArticle.thumbnail = 'thumbnail'
 		newArticle.image = 'image'
 		newArticle.published = 'published'
+		newArticle.url = 'www.url.com'
 		
 		def articles = []
 		articles.add(newArticle)
@@ -64,6 +66,7 @@ class OfficialArticlesServiceIntegrationTests {
 		newArticle.thumbnail = 'thumbnail'
 		newArticle.image = 'image'
 		newArticle.published = 'published'
+		newArticle.url = 'www.url.com'
 		
 		def articles = []
 		articles.add(newArticle)

@@ -19,6 +19,7 @@ class OfficialArticleTests {
 		article.thumbnail = 'thumbnail'
 		article.image = 'image'
 		article.published = 'published'
+		article.url = 'www.url.com'
 
 		// when
 		article.save()
@@ -42,6 +43,7 @@ class OfficialArticleTests {
 		assert article.errors.getFieldError('content')
 		assert article.errors.getFieldError('image')
 		assert article.errors.getFieldError('thumbnail')
+		assert article.errors.getFieldError('url')
 	}
 	
 	@Test
@@ -54,6 +56,7 @@ class OfficialArticleTests {
 		article.thumbnail = 'thumbnail'
 		article.image = 'image'
 		article.published = 'published'
+		article.url = 'www.url.com'
 		article.save()
 		
 		// and another one with the same title
