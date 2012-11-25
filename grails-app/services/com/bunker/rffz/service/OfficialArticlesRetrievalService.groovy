@@ -18,8 +18,9 @@ class OfficialArticlesRetrievalService {
 		Browser.drive{
 			// driver.webClient.javaScriptEnabled = true
 			go "http://www.steauafc.com/ro/stiri/"
+			//go "http://www.steauafc.com/ro/stiri/-/2012-10-25/2012-11-24/-/2/"
 			//go "http://www.steauafc.com/ro/stiri/-/2012-09-13/2012-10-13/-/2/"
-					 
+			
 			def articleLinksWithThumnails = [:] 
 			def articleLinks = [] // will ensure the order of the articles
 			

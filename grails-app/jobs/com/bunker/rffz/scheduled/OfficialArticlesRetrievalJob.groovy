@@ -10,7 +10,7 @@ class OfficialArticlesRetrievalJob {
 	def scheduledTaskService
 
 	static triggers = {
-		simple repeatInterval: 6 * 60 * 60 * 1000l // every 6 hours
+		simple repeatInterval: 4 * 60 * 60 * 1000l // every 4 hours
 	}
 
 	def execute() {
